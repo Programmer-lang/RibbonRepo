@@ -82,7 +82,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Coomon\ListViewEventArgsConverter.cs" />
+    <Compile Include="Common\ListViewEventArgsConverter.cs" />
     <Compile Include="Model\DataModel.cs" />
     <Compile Include="Model\MenuIDHistory.cs" />
     <Compile Include="ViewModels\ViewModel1.cs" />
