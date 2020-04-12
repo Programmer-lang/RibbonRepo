@@ -52,7 +52,7 @@
                                     <Label>Recent Documents</Label>
                                 </Border>
 
-                                <ListView x:Name="myListView" ItemsSource="{Binding MyList}">
+                                <ListView x:Name="myListView" ItemsSource="{Binding MyList}" SelectedItem="{Binding SelectedMenuId , Mode=TwoWay}">
                                     <ListView.ItemTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal">
@@ -66,9 +66,9 @@
 
                                     <dxmvvm:Interaction.Behaviors>
                                         <dxmvvm:EventToCommand Command="{Binding EditCommand}"  EventName="MouseDoubleClick" >
-                                            <dxmvvm:EventToCommand.EventArgsConverter>
+                                            <!--<dxmvvm:EventToCommand.EventArgsConverter>
                                                 <local:ListViewEventArgsConverter/>
-                                            </dxmvvm:EventToCommand.EventArgsConverter>
+                                            </dxmvvm:EventToCommand.EventArgsConverter>-->
                                         </dxmvvm:EventToCommand>
                                     </dxmvvm:Interaction.Behaviors>
 

@@ -16,6 +16,7 @@ namespace RecentApps.ViewModels
 
 
         DataModel DBContext = new DataModel();
+        public virtual MenuIDHistory SelectedMenuId { get; set; }
 
         public ObservableCollection<MenuIDHistory> MyList { get; set; }
 
@@ -29,7 +30,7 @@ namespace RecentApps.ViewModels
             try
             {
 
-                EditCommand = new DelegateCommand<MenuIDHistory>(Edit);
+        
 
                 //  MyList = DBContext.MenuIDHistories.ToList();
 
@@ -47,16 +48,15 @@ namespace RecentApps.ViewModels
             }
 
         }
-        public ICommand<MenuIDHistory> EditCommand { get; private set; }
-
-        public void Edit(MenuIDHistory MyData)
+    
+        public void Edit()
         {
             string data = "";
-            if (MyData != null)
+            if (SelectedMenuId != null)
             {
-                data = MyData.Note;
+                data = SelectedMenuId.Note;
             }
-            MessageBox.Show("Hi " + MyData.Note);
+            MessageBox.Show("Hi " + SelectedMenuId.Note);
         }
 
         public void New()
