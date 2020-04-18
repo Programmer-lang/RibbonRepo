@@ -140,6 +140,8 @@ namespace RecentApps.ViewModels
                 detailBand.Controls.Add(detailLabel1);
                 detailBand.Controls.Add(detailLabel2);
 
+
+
                 report.Bands.AddRange(new Band[] { reportHeaderBand, detailBand });
 
                 report.DataSource = MyList;
