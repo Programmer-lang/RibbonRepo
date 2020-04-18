@@ -7,6 +7,7 @@ using System.Windows;
 using DevExpress.XtraReports.UI;
 using System.Drawing;
 using System.Drawing.Printing;
+using DevExpress.Xpf.Reports.UserDesigner;
 
 namespace RecentApps.ViewModels
 {
@@ -143,9 +144,14 @@ namespace RecentApps.ViewModels
 
                 report.DataSource = MyList;
 
-                report.CreateDocument();
-                report.ShowPreviewDialog();
+                //   report.CreateDocument();
+                //  report.ShowPreviewDialog();
+                MyReport MyReport1 = new MyReport();
+        
+                MyReport1.ReportDesigner.OpenDocument(report);
 
+
+                MyReport1.Show();
 
                 //  report.ShowPreviewDialog();
 
